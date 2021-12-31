@@ -3,7 +3,7 @@ def slide(input, window):
 
 
 def answer(window=1):
-    with open("1_input.txt", "r") as f:
+    with open("input.txt", "r") as f:
         input = map(int, f.read().strip().split())
         last = None
         inc = 0
@@ -13,5 +13,6 @@ def answer(window=1):
             last = depth
         return inc
 
-print(answer()) # part 1
-print(answer(3)) # part 2
+if __name__ == "__main__":
+    print(answer(window=1))
+    print(answer(window=3))
